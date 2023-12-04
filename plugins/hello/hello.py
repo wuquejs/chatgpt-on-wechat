@@ -26,6 +26,7 @@ class Hello(Plugin):
         self.config = super().load_config()
         MyJob.__init__()
 
+
     def on_handle_context(self, e_context: EventContext):
         if e_context["context"].type not in [
             ContextType.TEXT,
