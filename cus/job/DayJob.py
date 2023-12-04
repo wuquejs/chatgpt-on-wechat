@@ -9,6 +9,8 @@ def job():
 
 
 class MyJob():
-    schedule.every().day.at("* * * * * ").do(job)
-    schedule.run_pending()
-    time.sleep(1)
+
+    def __init__(self):
+        schedule.every().day.at("* * * * * ").do(job)
+        schedule.run_pending()
+        time.sleep(1)
